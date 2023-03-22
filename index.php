@@ -25,7 +25,7 @@
                 placeholder="New task">
                 
                 <ul class="list-group">
-                    <li class="list-group-item" v-for="todo in todolists" :key="todo.id">
+                    <li class="list-group-item" v-for="todo in toDoLists" :key="todo.id">
                         {{todo}}
                     </li>
                 </ul>

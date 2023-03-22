@@ -4,7 +4,7 @@ createApp({
     data() {
         return {
             title: 'Todolist',
-            todolists:[],
+            toDoLists:[],
             newElToDo:'',
         }
     },
@@ -20,6 +20,11 @@ createApp({
                 headers:{
                     'Content-Type': 'multipart/form-data'
                 }
+            }).then(res=>{
+                this.toDoLists = res.data;
+                this.newElToDo = '';
+            }).catch((err)=>{
+                console.log(err);
             })
         },
         createToDoList(){
@@ -27,11 +32,11 @@ createApp({
             .get('./server.php')
             .then(res =>{
                 console.log(res.data);
-                this.todolists = res.data;
+                this.toDoLists = res.data;
             })
             .catch((err)=>{
                 console.log(err);
-                this.todolists = [];
+                this.toDoLists = [];
             })
         }
     },
