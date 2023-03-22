@@ -8,16 +8,18 @@ header('Content-Type: application/json');
 $todo_list =json_decode($todolist_string, true);
 
 //recupero le chiamata che arriva con saveTask
-//$newElToDo = isset($_POST['todo']) ? $_POST['todo'] : null;
+$newElToDo = isset($_POST['todo']) ? $_POST['todo'] : null;
 
 //se esiste lo aggiungo a $todo_list 
-// if($newElToDo !== null){
-//     $todo_list = $newElToDo;
-// }
+if($newElToDo !== null){
+    $todo_list[] = $newElToDo;
+}
 
-//e salvo il risultato
+//trasformo $todo_list in una stringa json
+$new_array_string = json_encode($todo_list);
+//e salvo il risultato nel file
+file_put_contents('./todolist.json',$new_array_string);
 
 //stampo
-//echo $todolist_string; 
 echo json_encode($todo_list); 
 ?>
