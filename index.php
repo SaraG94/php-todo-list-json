@@ -16,14 +16,17 @@
         <section>
             <div class="container">
                 <h1>{{ title }}</h1>
-            
+                
+                <form action="">
+                    <input class="form-control" type="text" placeholder="New task">
+                </form>
+                
                 <ul class="list-group">
-                    <li class="list-group-item" v-for="todo in todolists" :key="todo.id">{{todo}}</li>
+                    <li class="list-group-item" v-for="todo in todolists" :key="todo.id">
+                        {{todo}}
+                    </li>
                 </ul>
-
             </div>
-
-            
         </section>    
     </div>
 
