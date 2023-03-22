@@ -8,6 +8,9 @@ createApp({
         }
     },
     methods:{
+        saveTask(){
+            console.log('invio');
+        },
         createToDoList(){
             axios
             .get('./server.php')

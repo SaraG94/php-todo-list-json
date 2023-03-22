@@ -17,9 +17,7 @@
             <div class="container">
                 <h1>{{ title }}</h1>
                 
-                <form action="">
-                    <input class="form-control" type="text" placeholder="New task">
-                </form>
+                <input @keyup.enter="saveTask" class="form-control" type="text" placeholder="New task">
                 
                 <ul class="list-group">
                     <li class="list-group-item" v-for="todo in todolists" :key="todo.id">
