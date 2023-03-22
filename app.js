@@ -5,11 +5,12 @@ createApp({
         return {
             title: 'Todolist',
             todolists:[],
+            newElToDo:'',
         }
     },
     methods:{
         saveTask(){
-            console.log('invio');
+            console.log('invio',this.newElToDo);
         },
         createToDoList(){
             axios
