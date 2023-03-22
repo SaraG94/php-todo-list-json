@@ -16,5 +16,7 @@ if($newElToDo !== null){
 }
 
 //e salvo il risultato
+
+//stampo
 echo json_encode($todolist_string); 
 ?>
