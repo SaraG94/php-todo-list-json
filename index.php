@@ -16,6 +16,9 @@
             <div class="container">
                 <h1>{{ title }}</h1>
 
+                <ul>
+                    <li v-for="todo in todolists" :key="todo.id">{{todo}}</li>
+                </ul>
             </div>
 
             
