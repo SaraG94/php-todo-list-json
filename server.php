@@ -21,5 +21,5 @@ $new_array_string = json_encode($todo_list);
 file_put_contents('./todolist.json',$new_array_string);
 
 //stampo
-echo json_encode($todo_list); 
+echo $new_array_string; 
 ?>

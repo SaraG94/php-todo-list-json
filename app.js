@@ -12,11 +12,11 @@ createApp({
         saveTask(){
             console.log('invio',this.newElToDo);
 
-            $data_list ={
+            data_list ={
                 todo:this.newElToDo
             }
             //chiamata con post:indico percorso, indico oggetto che passo, configuro l'oggetto come se provenisse da un form
-            axios.post('./server.php', $data_list,{
+            axios.post('./server.php', data_list,{
                 headers:{
                     'Content-Type': 'multipart/form-data'
                 }
